@@ -1,0 +1,47 @@
+body{
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.padre{
+  width: 50%;
+}
+
+.container{
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 25vh;
+}
+
+.image-container{
+  background-image: url('./pitusa.jpg');
+  background-size: cover;
+}
+
+.content-container{
+  grid-column: span 2;
+  background-color: #EBEBEB;
+}
+
+@media screen and (max-width: 1500px){
+  .content-container{
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .image-container{
+    grid-column: span 2;
+  }
+  .content-container{
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .padre{
+    width: 100%;
+  }
+}
